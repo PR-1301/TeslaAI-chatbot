@@ -50,8 +50,8 @@ def chat(user_input, hist):
                        {"role": "assistant", "content": response}]
 
 
-page = gr.Blocks(title="Chat with Leo",
-                 theme=gr.themes.Soft())
+page = gr.Blocks(title="Chat with Tesla")
+
 
 
 def clear_chat():
@@ -65,8 +65,7 @@ with page:
 
     """)
 
-    chatbot = gr.Chatbot(type="messages", avatar_images=[None, 'download.jpg'],
-                         show_label=False)
+    chatbot = gr.Chatbot()
 
     msg = gr.Textbox(show_label=False, placeholder='Ask Anything...')
     msg.submit(chat, [msg, chatbot], [msg, chatbot])
@@ -74,4 +73,4 @@ with page:
     clear = gr.Button("Clear Chat", variant='Secondary')
     clear.click(clear_chat, outputs=[msg, chatbot])
 
-page.launch()
+page.launch(theme=gr.themes.Soft())
