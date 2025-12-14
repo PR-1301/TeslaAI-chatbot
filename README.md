@@ -1,5 +1,5 @@
 # TeslaAI-chatbot 
-**An AI chatbot built with Gradio**
+**An AI chatbot built with Langchain**
 
 TeslaAI-chatbot is a simple AI-powered chatbot application that leverages Python and Gradio to provide an interactive conversational interface. It’s ideal for experimenting with AI-driven chatbots, testing AI responses, and learning about building small AI GUI apps.
 ---
